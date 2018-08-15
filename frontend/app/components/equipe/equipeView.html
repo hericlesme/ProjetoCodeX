@@ -1,29 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-br" ng-app="equipe">
+
 <head>
 	<meta charset="utf-8">
 	<title>Codex - Equipe</title>
-	<link rel="stylesheet" type="text/css" href="equipe.css">
-</head>
-<body ng-controller="equipeCtrl">
-	<div>
-	<header id="cabecalho">
-		<hgroup>
-			<h1>codeX</h1>
-			<h2>Empresa Jr de Computação</h2>
-		</hgroup>
 
-		<nav id="menu">
-			<h1>Menu Principal</h1>
-			<ul>
-				<li><a href="index.html">Home<a></li>
-				<li><a href="sobre.html">Sobre</a></li>	
-				<li><a href="servicos.html">Serviços</a></li>
-				<li><a href="equipe.html">Equipe</a></li>
-				<li><a href="portfolio.html">Portfólio</a></li>
-				<li><a href="contato.html">Contato</a></li>
-			</ul>
-			</nav>	
-		</header>
-	</div>	
+	<link rel="stylesheet" type="text/css" href="../../lib/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="equipe.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+	 rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+	<script src="../../lib/angular/angular.js"></script>
+	<script src="equipeController.js"></script>
+</head>
+
+<body ng-controller="equipeCtrl">
+
+	<h1 class="site-heading text-center text-white d-none d-lg-block">
+		<span class="site-heading-upper text-primary mb-3">Empresa Jr. de Computação UFCG</span>
+		<span class="site-heading-lower">CodeX</span>
+	</h1>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">CodeX</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+			 aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item px-lg-4">
+						<a class="nav-link text-uppercase text-expanded" href="#">Home</a>
+					</li>
+					<li class="nav-item px-lg-4">
+						<a class="nav-link text-uppercase text-expanded" href="#">Sobre</a>
+					</li>
+					<li class="nav-item px-lg-4">
+						<a class="nav-link text-uppercase text-expanded" href="#">Serviços</a>
+					</li>
+					<li class="nav-item active px-lg-4">
+						<a class="nav-link text-uppercase text-expanded" href="#">Equipe
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item px-lg-4">
+						<a class="nav-link text-uppercase text-expanded" href="#">Portfólio</a>
+					</li>
+					<li class="nav-item px-lg-4">
+						<a class="nav-link text-uppercase text-expanded" href="#">Contato</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section class="page-section">
+
+		<div class="container">
+			<div class="product-item">
+				<div class="product-item-title d-flex">
+					<div class="bg-faded p-5 d-flex mr-auto rounded">
+						<h2 class="section-heading mb-0">
+							<span class="section-heading-lower">Nossa Equipe</span>
+							<span class="section-heading-upper">Um time preparado para desenvolver a sua solução</span>
+						</h2>
+					</div>
+				</div>
+				<img class="product-item-img mx-auto d-flex rounded img-fluid mb-5 mb-lg-0" src="../../../assets/images/groupwork2.jpg" alt="">
+			</div>
+		</div>
+	</section>
+
+	<section class="page-section cta">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card">
+						<div class="box">
+							<div class="img">
+								<img src="https://i.ebayimg.com/00/s/MTAwMFgxMDAw/z/L84AAOSw30JbApWU/$_12.JPG?set_id=880000500F">
+							</div>
+							<h2>Héricles Emanuel
+								<br>
+								<span>Web Developer</span>
+							</h2>
+							<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+							<span>
+								<ul>
+									<li>
+										<a href="#">
+											<i class="fa fa-facebook" aria-hidden="true"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-twitter" aria-hidden="true"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-google-plus" aria-hidden="true"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-linkedin" aria-hidden="true"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-instagram" aria-hidden="true"></i>
+										</a>
+									</li>
+								</ul>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer text-faded text-center py-5">
+		<div class="container">
+			<p class="m-0 small">Copyright &copy; CodeX 2018</p>
+		</div>
+	</footer>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="../../lib/jquery/jquery.min.js"></script>
+	<script src="../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+
+</html>
