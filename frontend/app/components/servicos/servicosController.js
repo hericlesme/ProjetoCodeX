@@ -1,4 +1,4 @@
-angular.module("servicoes", [])
-    .controller("servicoesCtrl", function($scope) {
+angular.module("servicos", [])
+    .controller("servicosCtrl", function($scope) {
 
     });
