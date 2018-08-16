@@ -65,7 +65,7 @@ header#cabecalho h2{
 }
 
 .card {
-    position:absolute;
+    margin-bottom: 10%;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
@@ -109,7 +109,6 @@ header#cabecalho h2{
     font-size:14px;
     background:#AFB42B;
     color:#fff;
-    display:inline-block;
     padding:4px 10px;
     border-radius:15px;
 }
@@ -138,4 +137,9 @@ header#cabecalho h2{
 .card .box ul li:hover a {
     color:#AFB42B;
     transform:rotateY(360deg);
+}
+
+.members {
+    background-color: rgb(75, 97, 108);   
+    margin-bottom: 100px;
 }
