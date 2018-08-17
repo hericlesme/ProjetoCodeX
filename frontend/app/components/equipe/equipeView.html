@@ -20,8 +20,8 @@
 <body ng-controller="equipeCtrl">
 
 	<h1 class="site-heading text-center text-white d-none d-lg-block">
-		<span class="site-heading-upper text-primary mb-3">Empresa Jr. de Computação UFCG</span>
-		<span class="site-heading-lower">CodeX</span>
+		<span class="site-heading-upper text-primary mb-3">{{page.subtitle}}</span>
+		<span class="site-heading-	a\cxlower">{{page.title}}</span>
 	</h1>
 
 	<!-- Navigation -->
@@ -65,8 +65,8 @@
 				<div class="product-item-title d-flex">
 					<div class="bg-faded p-5 d-flex mr-auto rounded">
 						<h2 class="section-heading mb-0">
-							<span class="section-heading-lower">Nossa Equipe</span>
-							<span class="section-heading-upper">Um time preparado para desenvolver a sua solução</span>
+							<span ng-class="classes.title">{{header.title}}</span>
+							<span ng-class="classes.subtitle">{{header.subtitle}}</span>
 						</h2>
 					</div>
 				</div>
@@ -75,34 +75,21 @@
 		</div>
 	</section>
 
+	<!-- Members Cards -->
 	<div class="members">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div ng-repeat="card in cards" class="col">
 					<div class="card">
 						<div class="box">
 							<div class="img">
-								<img src="https://i.ebayimg.com/00/s/MTAwMFgxMDAw/z/L84AAOSw30JbApWU/$_12.JPG?set_id=880000500F">
+								<img ng-src="{{card.image}}">
 							</div>
-							<h2>Héricles Emanuel
+							<h2>{{card.nome}}
 								<br>
-								<span>Web Developer</span>
+								<span>{{card.cargo}}</span>
 							</h2>
-							<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card">
-						<div class="box">
-							<div class="img">
-								<img src="https://cdn.awsli.com.br/600x1000/163/163225/produto/16984140/6b374ee25e.jpg">
-							</div>
-							<h2>Evelinne de Carvalho
-								<br>
-								<span>Web Developer</span>
-							</h2>
-							<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+							<p>{{card.descricao}}</p>
 						</div>
 					</div>
 				</div>
