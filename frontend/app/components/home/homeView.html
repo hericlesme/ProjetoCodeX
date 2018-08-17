@@ -20,8 +20,8 @@
 <body ng-controller="homeCtrl">
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
-        <span class="site-heading-upper text-primary mb-3">Empresa Jr. de Computação UFCG</span>
-        <span class="site-heading-lower">CodeX</span>
+        <span class="site-heading-upper text-primary mb-3">{{page.subtitle}}</span>
+        <span class="site-heading-lower">{{page.title}}</span>
     </h1>
 
     <!-- Navigation -->
@@ -65,15 +65,12 @@
                 <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="../../../assets/images/desk.jpeg" alt="">
                 <div class="intro-text left-0 text-center bg-faded p-5 rounded">
                     <h2 class="section-heading mb-4">
-                        <span class="section-heading-upper">codeX</span>
-                        <span class="section-heading-lower">A Empresa</span>
+                        <span ng-class="classes.subtitle">{{main.subtitle}}</span>
+                        <span ng-class="classes.title">{{main.title}}</span>
                     </h2>
-                    <p class="mb-3"> A CodeX tem a finalidade de aplicar os conhecimentos obtidos no campo teórico pelos estudantes de graduação
-                        do curso de Ciência da Computação da Universidade Federal de Campina Grande, em soluções digitais
-                        através da elaboração e execução de projetos comerciais, web e mobile para micro e pequenas empresas.
-                    </p>
+                    <p class="mb-3">{{main.content}}</p>
                     <div class="intro-button mx-auto">
-                        <a class="btn btn-primary btn-xl" href="#">Mais sobre nós!</a>
+                        <a class="btn btn-primary btn-xl" href="#">{{main.button}}</a>
                     </div>
                 </div>
             </div>
@@ -86,15 +83,10 @@
                 <div class="col-xl-9 mx-auto">
                     <div class="cta-inner text-center rounded">
                         <h2 class="section-heading mb-4">
-                            <span class="section-heading-upper">text</span>
-                            <span class="section-heading-lower">Lorem Ipsum</span>
+                            <span ng-class="classes.subtitle">{{secondary.subtitle}}</span>
+                            <span ng-class="classes.title">{{secondary.title}}</span>
                         </h2>
-                        <p class="mb-0">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac purus metus. Cras id imperdiet magna. Integer viverra vitae
-                            orci sit amet sagittis. Maecenas vulputate urna a iaculis iaculis. Nullam fringilla venenatis
-                            mi, ut porta nunc euismod quis. Pellentesque mi libero, pretium eu sem eu, rhoncus ultrices tortor.
-                            Suspendisse at placerat magna, commodo posuere diam. Cras neque massa, accumsan nec semper at,
-                            blandit sit amet massa.</p>
+                        <p class="mb-0">{{secondary.content}}</p>
                     </div>
                 </div>
             </div>
@@ -103,7 +95,7 @@
 
     <footer class="footer text-faded text-center py-5">
         <div class="container">
-            <p class="m-0 small">Copyright &copy; CodeX 2018</p>
+            <p class="m-0 small">{{copyright}}</p>
         </div>
     </footer>
 
