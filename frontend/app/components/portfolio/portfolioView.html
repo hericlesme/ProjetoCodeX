@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Codex - Portfólio</title>
+	<title>Codex - Equipe</title>
 
 	<link rel="stylesheet" type="text/css" href="../../lib/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
@@ -18,9 +18,10 @@
 </head>
 
 <body ng-controller="portfolioCtrl">
+
 	<h1 class="site-heading text-center text-white d-none d-lg-block">
-		<span class="site-heading-upper text-primary mb-3">Empresa Jr. de Computação UFCG</span>
-		<span class="site-heading-lower">CodeX</span>
+		<span class="site-heading-upper text-primary mb-3">{{page.subtitle}}</span>
+		<span class="site-heading-	a\cxlower">{{page.title}}</span>
 	</h1>
 
 	<!-- Navigation -->
@@ -42,13 +43,13 @@
 					<li class="nav-item px-lg-4">
 						<a class="nav-link text-uppercase text-expanded" href="../servicos/servicosView.html">Serviços</a>
 					</li>
-					<li class="nav-item px-lg-4">
-						<a class="nav-link text-uppercase text-expanded" href="../equipe/equipeView.html">Equipe</a>
-					</li>
 					<li class="nav-item active px-lg-4">
-						<a class="nav-link text-uppercase text-expanded" href="portfolioView.html">Portfólio
+						<a class="nav-link text-uppercase text-expanded" href="equipeView.html">Equipe
 							<span class="sr-only">(current)</span>
 						</a>
+					</li>
+					<li class="nav-item px-lg-4">
+						<a class="nav-link text-uppercase text-expanded" href="../portfolio/portfolioView.html">Portfólio</a>
 					</li>
 					<li class="nav-item px-lg-4">
 						<a class="nav-link text-uppercase text-expanded" href="../contato/contatoView.html">Contato</a>
@@ -57,4 +58,56 @@
 			</div>
 		</div>
 	</nav>
+	<section class="page-section">
+
+		<div class="container">
+			<div class="product-item">
+				<div class="product-item-title d-flex">
+					<div class="bg-faded p-5 d-flex mr-auto rounded">
+						<h2 class="section-heading mb-0">
+							<span ng-class="classes.title">{{header.title}}</span>
+							<span ng-class="classes.subtitle">{{header.subtitle}}</span>
+						</h2>
+					</div>
+				</div>
+				<img class="product-item-img mx-auto d-flex rounded img-fluid mb-5 mb-lg-0" src="../../../assets/images/groupwork2.jpg" alt="">
+			</div>
+		</div>
+	</section>
+
+	<!-- Members Cards -->
+	<div class="projects">
+		<div class="container">
+			<div class="row">
+				<div ng-repeat="card in cards" class="col">
+					<div class="card">
+						<div class="box">
+							<div class="img">
+								<img ng-src="{{card.image}}">
+							</div>
+							<h2>{{card.nome}}
+								<br>
+								<span><a href="">{{card.site}}</a></span>
+							</h2>
+							<p>{{card.descricao}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<footer class="footer text-faded text-center py-5">
+		<div class="container">
+			<p class="m-0 small">Copyright &copy; CodeX 2018</p>
+		</div>
+	</footer>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="../../lib/jquery/jquery.min.js"></script>
+	<script src="../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+
+</html>

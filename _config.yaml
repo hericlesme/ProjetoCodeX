@@ -1,0 +1,8 @@
+name: CodeX
+description: CodeX - Empresa Jr. de Computação - UFCG
+category_dir: 
+baseurl: 
+url: hericlesme.github.io/ProjetoCodex
+post_dirs: false
+exclude: [README.md]
+show_downloads: true
