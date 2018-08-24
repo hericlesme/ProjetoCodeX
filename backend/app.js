@@ -1,7 +1,12 @@
-var express = require("express");
-var app = express();
-var fs = require("fs");
+var express = require("express"),
+ 	app = express(),
+ 	fs = require("fs"),
+ 	mongoose = require("mongoose"),
+	options = {
+		useNewUrlParser: true
+	};
 
+mongoose.connect("mongodb://localhost:27017/code_x", options);
 
 app.get("/", function(req, res) {
 	// res.render("homeView.ejs");
@@ -94,3 +99,5 @@ app.get("*", function(req, res) {
 app.listen(2018, function() {
 	console.log("Servidor Rodando!!");
 });
+
+
